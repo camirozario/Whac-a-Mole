@@ -1,0 +1,68 @@
+@media(max-width:991px){
+
+.regras {
+    flex-direction: column;
+}
+
+.regras .contentBox {
+    width: unset;
+}
+
+.regras .imgBox {
+    height: 100%;
+}
+
+.tabuleiro {
+    height: 100%;
+}
+
+.tabuleiro-jogo{
+    flex-direction: column-reverse;
+}
+
+.pontos th {
+    font-size: 30px;
+}
+
+.pontos td:first-child {
+    font-size:20px;
+}
+
+.gramado {
+    width: 100vw;
+}
+
+.pontos {
+    width: 400px;
+    height: 400px;
+}
+
+.gramado img{
+    padding: 10px 30px 10px 30px;
+}
+
+.records tr th{
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.records th {
+    font-size:18px;
+}
+
+.records td {
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 15px;
+}
+
+.regras-container .toupeira{
+    display:none;
+}
+
+.tabuleiro-jogo {
+    flex-direction: column;
+
+}
+
+}
