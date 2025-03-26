@@ -25,7 +25,8 @@ var gameStart = false;
 var tempoRestante = 30;
 
 onload = function () { /* equivale a window.onload = function () */
-    document.getElementById('start').addEventListener('click',start);
+    document.getElementById('start-cel').addEventListener('click',start);
+    document.getElementById('start-pc').addEventListener('click',start);
     document.getElementById('idGramado').addEventListener('mousedown',marteloBaixo);
     document.getElementById('idGramado').addEventListener('mouseup', marteloCima);
     document.getElementById('idGramado').addEventListener('click',martelada);
@@ -44,7 +45,8 @@ function start (){
         acertos = 0;
         perdidos = 0;
     }
-    var botao = document.getElementById('start');
+    var botao = document.getElementById('start-cel');
+    var botao = document.getElementById('start-pc');
     botao.removeEventListener('click',start);
     botao.disable = true;
     gameStart = true;
@@ -66,7 +68,8 @@ function start (){
                 clearInterval(timerInterval); 
                 document.getElementById('tempo').textContent = "Acabou o tempo!"; 
                 alert(`Acabou o Tempo! Você fez ${saldo} pontos!`);
-                document.getElementById('start').addEventListener('click',start);
+                document.getElementById('start-cel').addEventListener('click',start);
+                document.getElementById('start-pc').addEventListener('click',start);
                 gameStart = false;
             }
 
@@ -106,6 +109,7 @@ function tiraToupeira(buraco){
     var objBuraco = document.getElementById('buraco'+ buraco);
     if (objBuraco.src.includes('hole-mole')){
         perdidos++
+        mostraPontuacao();
     }
     objBuraco.src = 'images/hole.png';
     mostraPontuacao();

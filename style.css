@@ -111,9 +111,11 @@ body {
     align-items: center;
     justify-content: center;
     background-color: #00ff00;
+    overflow: auto;
 }
 
 .tabuleiro-topo {
+    margin-top: 5vh;
     display:flex;
     align-items: center;
     flex-direction: column;
@@ -188,7 +190,11 @@ body {
     font-size: 36px;
     font-family: 'Bungee Spice', sans-serif;
 }
-  
+
+.play-cel{
+    display: none;
+}
+
 .regras {
     display: none;
     position: fixed;

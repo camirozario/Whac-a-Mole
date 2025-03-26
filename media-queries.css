@@ -16,6 +16,25 @@
     height: 100%;
 }
 
+.tabuleiro-topo {
+    gap: 10px;
+}
+
+.countdown {
+    flex-direction: row;
+    gap:15px;
+}
+
+.play-cel{
+    font-family: 'Bungee Spice', sans-serif;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.play-pc{
+    display: none;
+}
 .tabuleiro-jogo{
     flex-direction: column-reverse;
 }

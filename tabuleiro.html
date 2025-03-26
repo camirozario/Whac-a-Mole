@@ -27,6 +27,46 @@
     <h1>Timer</h1>
     <p id="tempo">00:00</p>
     </div>
+
+    <!-- start para celulares -->
+    <div class="play-cel">
+    <button id="start-cel" class="btn btn-light">Start</button>
+    <button class="btn btn-light" onclick="openForm()">?</button>
+
+    <div class="regras" id="regras">
+        <button class="btn btn-light" type="button" onclick="closeForm()">x</button>
+    <div class="regras-container">
+    
+        <div class="texto">
+            <h1>REGRAS</h2>
+            <b>Objetivo do Jogo</b>
+            <ul>
+            <li> O jogador deve acertar o maior número possível de toupeiras (ou alvos) que surgem em buracos dentro de um tempo limitado.</li>
+            </ul>
+            
+            <b>Como Jogar</b>
+            <ul>
+            <li> Inicie o jogo pressionando "Start"</li>
+            <li> Usando o Mouse, acerte o máximo de toupeiras enquanto tiver tempo!</li>
+            <li> O jogador usa um martelo (real ou virtual) para bater nas toupeiras quando elas surgirem.</li>
+            </ul>
+
+            <b>Pontuação</b>
+            <ul>
+            <li> Cada toupeira equivale a um ponto.</li>
+            <li> Clicando no local errado ou perdendo uma toupeira serão descontados pontos do jogador</li>
+            <li> O Saldo final de pontos é calculado quando o tempo termina!</li>
+            </ul>
+        </div>
+        <div class="toupeira"></div>
+           
+
+            
+    </div>
+    
+    </div>
+</div>
+    <!-- fim start para celulares -->
     <div class="tabuleiro-jogo">
         <div class="gramado" id="idGramado">
            <img src="images/hole.png" alt="buraco vazio" class="hole" id="buraco0">
@@ -43,33 +83,30 @@
                 <tbody>
                     <tr>
                         <td>Acertos:</td>
-                        <td class="potuacao" id="acertos">
-                        <img src="images/caractere_0.gif" alt="0"><img src="images/caractere_0.gif" alt="0"><img src="images/caractere_0.gif" alt="0">
+                        <td class="potuacao" id="acertos"><img src="images/caractere_0.gif" alt="0"><img src="images/caractere_0.gif" alt="0"><img src="images/caractere_0.gif" alt="0">
                     </td>
                     </tr>
                     <tr>
                         <td>Perdidos</td>
-                        <td class="potuacao" id="perdidos">
-                        <img src="images/caractere_0.gif" alt="0"><img src="images/caractere_0.gif" alt="0"><img src="images/caractere_0.gif" alt="0">
+                        <td class="potuacao" id="perdidos"><img src="images/caractere_0.gif" alt="0"><img src="images/caractere_0.gif" alt="0"><img src="images/caractere_0.gif" alt="0">
                         </td>
                     </tr>
                     <tr>
                         <td>Errados</td>
-                        <td class="potuacao" id="errados">
-                        <img src="images/caractere_0.gif" alt="0"><img src="images/caractere_0.gif" alt="0"><img src="images/caractere_0.gif" alt="0">
+                        <td class="potuacao" id="errados"><img src="images/caractere_0.gif" alt="0"><img src="images/caractere_0.gif" alt="0"><img src="images/caractere_0.gif" alt="0">
                         </td>
                     </tr>
                     <tr>
                         <td>Saldo:</td>
-                        <td class="potuacao" id="saldo">
-                        <img src="images/caractere_0.gif" alt="0"><img src="images/caractere_0.gif" alt="0"><img src="images/caractere_0.gif" alt="0">
+                        <td class="potuacao" id="saldo"><img src="images/caractere_0.gif" alt="0"><img src="images/caractere_0.gif" alt="0"><img src="images/caractere_0.gif" alt="0">
                         </td>
                     </tr>
                     <tr>
                         <td colspan="2">
-                            <button id="start" class="btn btn-light">Start</button>
+                            <div class="play-pc">
+                            <button id="start-pc" class="btn btn-light">Start</button>
                             <button class="btn btn-light" onclick="openForm()">?</button>
-
+                            
                             <div class="regras" id="regras">
                                 <button class="btn btn-light" type="button" onclick="closeForm()">x</button>
                             <div class="regras-container">
@@ -96,13 +133,12 @@
                                     </ul>
                                 </div>
                                 <div class="toupeira"></div>
-                                   
+                            </div>
 
                                     
                             </div>
-                            
                             </div>
-</div>
+                         </div>
                         </td>
                     </tr>
                 </tbody>
