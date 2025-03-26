@@ -79,32 +79,38 @@ function sobeToupeira(){
 
     /* tempo entre cada toupeira sair do buraco */
     var intervalo = Math.floor(Math.random() * (3000 - 4000 + 1)) + 3000;
+    var intervalo2 = Math.floor(Math.random() * (3000 - 4000 + 1)) + 3000;
     /* tempo que a toupeira fica fora do buraco */
     var janela = Math.floor(Math.random() * (4000 - 2000 + 1)) + 2000;
+    var janela2 = Math.floor(Math.random() * (4000 - 2000 + 1)) + 2000;
+
     var buraco = Math.floor(Math.random() * 5);
     var objBuraco = document.getElementById('buraco'+ buraco);
-    
     var buraco2 = Math.floor(Math.random() * 5);
     var objBuraco2 = document.getElementById('buraco'+ buraco2);
 
+    if (buraco != buraco2){
+    objBuraco2.src = 'images/hole-mole.png';
+    timer2 = setTimeout(tiraToupeira,janela2,buraco2);
+    }
+
     if (gameStart === true){
     objBuraco.src = 'images/hole-mole.png';
-    objBuraco2.src = 'images/hole-mole.png';
+    
     timer = setTimeout(tiraToupeira,janela,buraco);
-    timer2 = setTimeout(tiraToupeira,janela,buraco2);
     setTimeout(sobeToupeira,intervalo);
-}
+    }
 }
 
 function tiraToupeira(buraco){
-    if (tempoRestante == 30){
-        var perdidos = 0;
-    }
     var objBuraco = document.getElementById('buraco'+ buraco);
+    if (objBuraco.src.includes('hole-mole')){
+        perdidos++
+    }
     objBuraco.src = 'images/hole.png';
-    perdidos++;
     mostraPontuacao();
 }
+
 
 function mostraPontuacao() {
     mostraPontuacaoDe('acertos', acertos);

@@ -189,7 +189,7 @@ body {
     font-family: 'Bungee Spice', sans-serif;
 }
   
-  .regras {
+.regras {
     display: none;
     position: fixed;
     max-height: 90vh;
@@ -197,20 +197,20 @@ body {
     top:0vh;
     left: 0vw;
     justify-content: center;
-    right: 15px;
     background-color: rgba(201, 201, 201, 0.7);
     border-radius: 10px;
     z-index: 9;
   }
 
-  .regras button{
-    background: none;
-    padding: 0 20px 0 0;
+.regras button{
+    margin: 0 10px 0 0;
     border: none;
-    font-size: 16px;
+    font-size:18px;
+    border-radius:50%;
+    scale:70%
   }
   
-  .regras-container {
+.regras-container {
     display: flex;
     max-height: 90vh;
     padding: 30px;
@@ -220,13 +220,26 @@ body {
     overflow: auto;
   }
 
-  .regras-container .texto {
+
+
+.regras-container .texto {
+    float: left;
     text-align: left;
     font-family:'Medievalsharp', cursive;
     font-size: 16px;
   }
 
-  .regras-container .toupeira{
+.regras ul {
+    text-align: left; /* Ensures all list items are aligned to the left */
+    padding-left: 20px; /* Ensure consistent left padding */
+    list-style-position: inside; /* Keeps bullet points aligned */
+}
+
+.regras li {
+    text-align: left; /* Forces individual items to align left */
+}
+
+.regras-container .toupeira{
         width: 100%;
         background: url(../images/Mole.png);
         background-size: 70%;
@@ -234,7 +247,7 @@ body {
         background-repeat:no-repeat;
   }
 
-  .regras-container h1 {
+.regras-container h1 {
     font-family: 'Bungee Spice', sans-serif;
     font-size: 24px;
   }
