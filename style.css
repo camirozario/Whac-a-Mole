@@ -196,8 +196,9 @@ body {
 }
 
 .regras {
-    display: none;
-    position: fixed;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
     max-height: 90vh;
     margin: 5vh 20vw 5vh 20vw;
     top:0vh;
@@ -205,14 +206,18 @@ body {
     justify-content: center;
     background-color: rgba(201, 201, 201, 0.7);
     border-radius: 10px;
-    z-index: 9;
+    z-index: 5;
   }
 
 .regras button{
     margin: 0 10px 0 0;
+    right:10px;
+    height: 40px;
+    width: 40px;
     border: none;
     font-size:18px;
     border-radius:50%;
+    font-family: 'Bungee Spice', sans-serif;
     scale:70%
   }
   
@@ -225,7 +230,6 @@ body {
     border-radius: 5px;
     overflow: auto;
   }
-
 
 
 .regras-container .texto {

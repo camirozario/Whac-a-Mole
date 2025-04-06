@@ -176,9 +176,9 @@ function martelada(evento) {
 }
 
 function openForm() {
-    document.getElementById("regras").style.display = "block";
+    document.getElementById('regras').style.display = 'block';
   }
   
   function closeForm() {
-    document.getElementById("regras").style.display = "none";
+    document.getElementById('regras').style.display = 'none';
   }
