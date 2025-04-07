@@ -78,7 +78,6 @@ function start (){
 
 function sobeToupeira(){
        
-    console.log("sobeToupeira() foi chamado!"); // Debug
 
     /* tempo entre cada toupeira sair do buraco */
     var intervalo = Math.floor(Math.random() * (3000 - 4000 + 1)) + 3000;
@@ -107,7 +106,8 @@ function sobeToupeira(){
 
 function tiraToupeira(buraco){
     var objBuraco = document.getElementById('buraco'+ buraco);
-    if (objBuraco.src.includes('hole-mole')){
+    if (objBuraco.src.includes('hole-mole') && (tempoRestante > 0)){
+        console.log(`${tempoRestante}`)
         perdidos++
         mostraPontuacao();
     }
